@@ -786,7 +786,7 @@ async function analyzeReviews() {
         renderDashboard();
 
         elements.resultsSubtitle.textContent =
-            `AI analysis · ${reviews.length} product reviews`;
+    `${data.mode === "simulation" ? "SIMULATION MODE · " : "AI analysis · "}${reviews.length} product reviews`;
 
         document.getElementById("resultsSection").scrollIntoView({
             behavior: "smooth",
